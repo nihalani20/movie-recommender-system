@@ -1,3 +1,4 @@
 .idea/
 new/
+#similarity.pkl filter=lfs diff=lfs merge=lfs -text
 similarity.pkl
