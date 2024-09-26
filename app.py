@@ -15,11 +15,11 @@ from requests.exceptions import ConnectionError, HTTPError
 
 #below code is to resolve the connection error
 
-def fetch_poster(movie_id, retries=5, delay=10):
+def fetch_poster(movie_id, retries=8, delay=10):
     url = 'https://api.themoviedb.org/3/movie/{}?api_key=13eab87763863b68e22721c63e842eb6&language=en-US'.format(movie_id)
     for attempt in range(retries):
         try:
-            response = requests.get(url, timeout=20)  # timeout in seconds
+            response = requests.get(url, timeout=30)  # timeout in seconds
             #response = requests.get(url)
             response.raise_for_status()  # Raise an HTTPError for bad responses (4xx and 5xx)
 
